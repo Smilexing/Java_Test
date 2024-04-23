@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
  * @description: TODO
  * @date 2024/4/4 10:27
  */
-//使用JDK自带的Executors来创建线程池对象
+//使用Executors来创建线程池对象
 public class Thread_2 implements Runnable{
     @Override
     public void run() {

@@ -1,4 +1,4 @@
-package com.smile;
+package com.smile.single;
 
 /**
  * @author Tom Smile

@@ -1,4 +1,4 @@
-package com.smile.WriteTest;
+package com.smile.WriteTest.Class;
 
 /**
  * @author Tom Smile
@@ -6,6 +6,7 @@ package com.smile.WriteTest;
  * @description: TODO
  * @date 2024/4/4 11:46
  */
+// 重载
 public class overWrite_Test {
         public static void main(String args[]) {
             String s = "tommy";

@@ -10,22 +10,37 @@ import java.util.concurrent.FutureTask;
  * @description: TODO
  * @date 2024/4/4 10:39
  */
+
+//Callable 创建线程
 public class Thread_4 {
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        // Create a FutureTask that is associated with a Callable
-        FutureTask<String> task = new FutureTask<>(new ThreadFuture());
-        // Start a new Thread with the FutureTask
-        new Thread(task).start();
-        // Wait for the computation to complete and retrieve its result
-        String message = task.get();
-        System.out.println(message);
+    public static void main(String[] args) {
+        Callable1 c = new Callable1();
+
+        //异步计算的结果
+        FutureTask<Integer> result = new FutureTask<>(c);
+
+        new Thread(result).start();
+
+        try {
+            //等待任务完成，返回结果
+            int sum = result.get();
+            System.out.println(sum);
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
-    // Define the Callable class
-    public static class ThreadFuture implements Callable<String> {
-        @Override
-        public String call() {
-            return "hello callable";
+}
+
+class Callable1 implements Callable<Integer> {
+
+    @Override
+    public Integer call() throws Exception {
+        int sum = 0;
+
+        for (int i = 0; i <= 100; i++) {
+            sum += i;
         }
+        return sum;
     }
 }

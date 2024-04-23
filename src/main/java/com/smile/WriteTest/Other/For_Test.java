@@ -1,4 +1,4 @@
-package com.smile.WriteTest;
+package com.smile.WriteTest.Other;
 
 /**
  * @author Tom Smile

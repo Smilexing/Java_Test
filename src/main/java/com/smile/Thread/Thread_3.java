@@ -10,10 +10,11 @@ package com.smile.Thread;
 public class Thread_3 implements Runnable{
     @Override
     public void run() {
-        System.out.println("hello i'm new thread3..");
+        System.out.println("当前线程："+Thread.currentThread().getName());
     }
 
     public static void main(String[] args) {
+
         new Thread(new Thread_3()).start();
     }
 }

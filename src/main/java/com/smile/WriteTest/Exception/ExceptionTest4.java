@@ -1,4 +1,4 @@
-package com.smile;
+package com.smile.WriteTest.Exception;
 
 /**
  * @author Tom Smile
@@ -6,7 +6,7 @@ package com.smile;
  * @description: TODO
  * @date 2024/4/8 9:09
  */
-public class ExceptionTest {
+public class ExceptionTest4 {
         public static int aMethod(int i)throws Exception
         {
             try{
