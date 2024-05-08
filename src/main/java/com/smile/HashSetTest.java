@@ -10,6 +10,7 @@ import java.util.Set;
  * @description: TODO
  * @date 2024/4/13 17:13
  */
+//HashSet添加和删除元素等操作
 public class HashSetTest {
     public static void main(String[] args) {
         Set<Integer> set1 = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5));
